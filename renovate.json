@@ -6,16 +6,8 @@
   "prHourlyLimit": 0,
   "packageRules": [
     {
-      "packagePatterns": ["^org.apache.struts"],
-      "enabled": true
-    },
-    {
-      "managers": [
-          "maven"
-      ],
-      "registryUrls": [
-          "https://packages.atlassian.com/maven/repository/internal"
-      ]
+      "managers": "maven",
+      "registryUrls": "https://packages.atlassian.com/maven/repository/internal"
     }
   ]
 }
