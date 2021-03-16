@@ -1,0 +1,430 @@
+ WARN: Configuring logLevel in CLI or file is deprecated. Use LOG_LEVEL environment variable instead
+DEBUG: File config
+       "config": {
+         "token": "***********",
+         "platform": "github",
+         "logLevel": "debug",
+         "onboardingConfig": {"extends": ["config:base"]},
+         "repositories": ["dserkowski/renovateTest"],
+         "gitAuthor": "Renovate Bot <zarbonix@gmail.com>"
+       }
+DEBUG: CLI config
+       "config": {}
+DEBUG: Env config
+       "config": {"hostRules": [], "binarySource": "docker"}
+DEBUG: Combined config
+       "config": {
+         "token": "***********",
+         "platform": "github",
+         "logLevel": "debug",
+         "onboardingConfig": {"extends": ["config:base"]},
+         "repositories": ["dserkowski/renovateTest"],
+         "gitAuthor": "Renovate Bot <zarbonix@gmail.com>",
+         "hostRules": [],
+         "binarySource": "docker"
+       }
+DEBUG: Using default github endpoint: https://api.github.com/
+DEBUG: Authenticated as GitHub user: dserkowski
+DEBUG: Using configured gitAuthor (Renovate Bot <zarbonix@gmail.com>)
+DEBUG: Using baseDir: /tmp/renovate
+DEBUG: Using cacheDir: /tmp/renovate/cache
+DEBUG: Initializing Renovate internal cache into /tmp/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+ INFO: No docker daemon found
+ INFO: Repository started (repository=dserkowski/renovateTest)
+       "renovateVersion": "24.86.0"
+DEBUG: Using localDir: /tmp/renovate/repos/github/dserkowski/renovateTest (repository=dserkowski/renovateTest)
+DEBUG: initRepo("dserkowski/renovateTest") (repository=dserkowski/renovateTest)
+DEBUG: Overriding default GitHub endpoint (repository=dserkowski/renovateTest)
+       "endpoint": "https://api.github.com/"
+DEBUG: dserkowski/renovateTest default branch = main (repository=dserkowski/renovateTest)
+DEBUG: Using personal access token for git init (repository=dserkowski/renovateTest)
+DEBUG: resetMemCache() (repository=dserkowski/renovateTest)
+DEBUG: checkOnboarding() (repository=dserkowski/renovateTest)
+DEBUG: isOnboarded() (repository=dserkowski/renovateTest)
+DEBUG: findFile(renovate.json) (repository=dserkowski/renovateTest)
+DEBUG: Initializing git repository into /tmp/renovate/repos/github/dserkowski/renovateTest (repository=dserkowski/renovateTest)
+DEBUG: git clone completed (repository=dserkowski/renovateTest)
+       "durationMs": 671
+DEBUG: latest repository commit (repository=dserkowski/renovateTest)
+       "latestCommit": {
+         "hash": "94ab58d8df9447a9a4eaff70a7498a0cf01d4621",
+         "date": "2021-03-16T22:10:23+01:00",
+         "message": "Renovate config fix",
+         "refs": "HEAD -> main, origin/main, origin/HEAD",
+         "body": "",
+         "author_name": "Daniel Serkowski",
+         "author_email": "dserkowski@atlassian.com"
+       }
+DEBUG: Setting git author name (repository=dserkowski/renovateTest)
+       "gitAuthorName": "Renovate Bot"
+DEBUG: Setting git author email (repository=dserkowski/renovateTest)
+       "gitAuthorEmail": "zarbonix@gmail.com"
+DEBUG: Config file exists (repository=dserkowski/renovateTest)
+       "fileName": "renovate.json"
+DEBUG: Retrieving issueList (repository=dserkowski/renovateTest)
+DEBUG: Retrieved 1 issues (repository=dserkowski/renovateTest)
+DEBUG: Repo is onboarded (repository=dserkowski/renovateTest)
+DEBUG: Found renovate.json config file (repository=dserkowski/renovateTest)
+DEBUG: Repository config (repository=dserkowski/renovateTest)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base"],
+         "prHourlyLimit": 0,
+         "packageRules": [
+           {
+             "managers": ["maven"],
+             "registryUrls": [
+               "https://packages.atlassian.com/maven/repository/internal"
+             ]
+           }
+         ]
+       }
+DEBUG: migrateAndValidate() (repository=dserkowski/renovateTest)
+DEBUG: Config migration necessary (repository=dserkowski/renovateTest)
+       "oldConfig": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base"],
+         "prHourlyLimit": 0,
+         "packageRules": [
+           {
+             "managers": ["maven"],
+             "registryUrls": [
+               "https://packages.atlassian.com/maven/repository/internal"
+             ]
+           }
+         ]
+       },
+       "newConfig": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base"],
+         "prHourlyLimit": 0,
+         "packageRules": [
+           {
+             "registryUrls": [
+               "https://packages.atlassian.com/maven/repository/internal"
+             ],
+             "matchManagers": ["maven"]
+           }
+         ]
+       }
+DEBUG: massaged config (repository=dserkowski/renovateTest)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base"],
+         "prHourlyLimit": 0,
+         "packageRules": [
+           {
+             "registryUrls": [
+               "https://packages.atlassian.com/maven/repository/internal"
+             ],
+             "matchManagers": ["maven"]
+           }
+         ]
+       }
+DEBUG: migrated config (repository=dserkowski/renovateTest)
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "extends": ["config:base"],
+         "prHourlyLimit": 0,
+         "packageRules": [
+           {
+             "registryUrls": [
+               "https://packages.atlassian.com/maven/repository/internal"
+             ],
+             "matchManagers": ["maven"]
+           }
+         ]
+       }
+DEBUG: Found repo ignorePaths (repository=dserkowski/renovateTest)
+       "ignorePaths": [
+         "**/node_modules/**",
+         "**/bower_components/**",
+         "**/vendor/**",
+         "**/examples/**",
+         "**/__tests__/**",
+         "**/test/**",
+         "**/tests/**",
+         "**/__fixtures__/**"
+       ]
+DEBUG: detectSemanticCommits() (repository=dserkowski/renovateTest)
+DEBUG: getCommitMessages (repository=dserkowski/renovateTest)
+DEBUG: Semantic commits detection: unknown (repository=dserkowski/renovateTest)
+DEBUG: No semantic commits detected (repository=dserkowski/renovateTest)
+DEBUG: Setting branchPrefix: renovate/ (repository=dserkowski/renovateTest)
+DEBUG: Cannot read vulnerability alerts (repository=dserkowski/renovateTest)
+DEBUG: No vulnerability alerts found (repository=dserkowski/renovateTest)
+DEBUG: processRepo() (repository=dserkowski/renovateTest)
+DEBUG: No baseBranches (repository=dserkowski/renovateTest)
+DEBUG: extract() (repository=dserkowski/renovateTest)
+DEBUG: Setting current branch to main (repository=dserkowski/renovateTest)
+DEBUG: latest commit (repository=dserkowski/renovateTest)
+       "branchName": "main",
+       "latestCommitDate": "2021-03-16T22:10:23+01:00"
+DEBUG: Using file match: (^|/)tasks/[^/]+\.ya?ml$ for manager ansible (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)requirements\.ya?ml$ for manager ansible-galaxy (repository=dserkowski/renovateTest)
+DEBUG: Using file match: azure.*pipelines?.*\.ya?ml$ for manager azure-pipelines (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)batect(-bundle)?\.yml$ for manager batect (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)batect$ for manager batect-wrapper (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)WORKSPACE(|\.bazel)$ for manager bazel (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.bzl$ for manager bazel (repository=dserkowski/renovateTest)
+DEBUG: Using file match: buildkite\.ya?ml for manager buildkite (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.buildkite/.+\.ya?ml$ for manager buildkite (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Gemfile$ for manager bundler (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Cargo.toml$ for manager cargo (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/).circleci/config.yml$ for manager circleci (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)cloudbuild.ya?ml for manager cloudbuild (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Podfile$ for manager cocoapods (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)([\w-]*)composer.json$ for manager composer (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)deps\.edn$ for manager deps-edn (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)docker-compose[^/]*\.ya?ml$ for manager docker-compose (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/|\.)Dockerfile$ for manager dockerfile (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Dockerfile\.[^/]*$ for manager dockerfile (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/).drone.yml$ for manager droneci (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/).gitmodules$ for manager git-submodules (repository=dserkowski/renovateTest)
+DEBUG: Using file match: ^\.github\/workflows\/[^/]+\.ya?ml$ for manager github-actions (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.gitlab-ci\.yml$ for manager gitlabci (repository=dserkowski/renovateTest)
+DEBUG: Using file match: ^\.gitlab-ci\.yml$ for manager gitlabci-include (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)go.mod$ for manager gomod (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)gradle.properties$ for manager gradle (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)gradle.properties$ for manager gradle-lite (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.gradle(\.kts)?$ for manager gradle-lite (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)gradle/wrapper/gradle-wrapper.properties$ for manager gradle-wrapper (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)requirements\.yaml$ for manager helm-requirements (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)values.yaml$ for manager helm-values (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)helmfile.yaml$ for manager helmfile (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Chart.yaml$ for manager helmv3 (repository=dserkowski/renovateTest)
+DEBUG: Using file match: ^Formula/[^/]+[.]rb$ for manager homebrew (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.html?$ for manager html (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)plugins\.txt for manager jenkins (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)kustomization\.yaml for manager kustomize (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)project\.clj$ for manager leiningen (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.pom\.xml$ for manager maven (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)pom\.xml$ for manager maven (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)package.js$ for manager meteor (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)mix\.exs$ for manager mix (repository=dserkowski/renovateTest)
+DEBUG: Using file match: ^.node-version$ for manager nodenv (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)package.json$ for manager npm (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.(?:cs|fs|vb)proj$ for manager nuget (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.(?:props|targets)$ for manager nuget (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.config\/dotnet-tools\.json$ for manager nuget (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)\.nvmrc$ for manager nvm (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)([\w-]*)requirements.(txt|pip)$ for manager pip_requirements (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)setup.py$ for manager pip_setup (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Pipfile$ for manager pipenv (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)pyproject\.toml$ for manager poetry (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)\.pre-commit-config\.yaml$ for manager pre-commit (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)pubspec\.ya?ml$ for manager pub (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)\.ruby-version$ for manager ruby-version (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.sbt$ for manager sbt (repository=dserkowski/renovateTest)
+DEBUG: Using file match: project/[^/]*.scala$ for manager sbt (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)setup\.cfg$ for manager setup-cfg (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)Package\.swift for manager swift (repository=dserkowski/renovateTest)
+DEBUG: Using file match: \.tf$ for manager terraform (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)\.terraform-version$ for manager terraform-version (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)terragrunt\.hcl$ for manager terragrunt (repository=dserkowski/renovateTest)
+DEBUG: Using file match: (^|/)\.terragrunt-version$ for manager terragrunt-version (repository=dserkowski/renovateTest)
+DEBUG: Using file match: ^.travis.yml$ for manager travis (repository=dserkowski/renovateTest)
+DEBUG: Matched 1 file(s) for manager maven: pom.xml (repository=dserkowski/renovateTest)
+DEBUG: Found maven package files (repository=dserkowski/renovateTest)
+DEBUG: Found 1 package file(s) (repository=dserkowski/renovateTest)
+ INFO: Dependency extraction complete (repository=dserkowski/renovateTest)
+       "baseBranch": "main",
+       "stats": {
+         "managers": {"maven": {"fileCount": 1, "depCount": 11}},
+         "total": {"fileCount": 1, "depCount": 11}
+       }
+DEBUG: Looking up junit:junit in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-clean-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-resources-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-compiler-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-surefire-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 14 new releases for org.apache.maven.plugins:maven-clean-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-jar-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 18 new releases for org.apache.maven.plugins:maven-resources-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-install-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 25 new releases for org.apache.maven.plugins:maven-compiler-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-deploy-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 32 new releases for junit:junit in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-site-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 18 new releases for org.apache.maven.plugins:maven-jar-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 11 new releases for org.apache.maven.plugins:maven-install-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Looking up org.apache.maven.plugins:maven-project-info-reports-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 14 new releases for org.apache.maven.plugins:maven-deploy-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 53 new releases for org.apache.maven.plugins:maven-surefire-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 22 new releases for org.apache.maven.plugins:maven-project-info-reports-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Found 32 new releases for org.apache.maven.plugins:maven-site-plugin in repository https://packages.atlassian.com/maven/repository/internal/ (repository=dserkowski/renovateTest)
+DEBUG: Package releases lookups complete (repository=dserkowski/renovateTest)
+       "baseBranch": "main"
+DEBUG: branchifyUpgrades (repository=dserkowski/renovateTest)
+DEBUG: 0 flattened updates found:  (repository=dserkowski/renovateTest)
+DEBUG: Returning 0 branch(es) (repository=dserkowski/renovateTest)
+DEBUG: config.repoIsOnboarded=true (repository=dserkowski/renovateTest)
+DEBUG: packageFiles with updates (repository=dserkowski/renovateTest)
+       "config": {
+         "maven": [
+           {
+             "datasource": "maven",
+             "packageFile": "pom.xml",
+             "deps": [
+               {
+                 "datasource": "maven",
+                 "depName": "junit:junit",
+                 "currentValue": "4.13.2",
+                 "fileReplacePosition": 971,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depType": "test",
+                 "depIndex": 0,
+                 "updates": [],
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/junit-team/junit4",
+                 "homepage": "http://junit.org",
+                 "fixedVersion": "4.13.2"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.struts:struts2-core",
+                 "currentValue": "${struts.version}-atlassian-1",
+                 "fileReplacePosition": 780,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "groupName": "struts-atlassian.version",
+                 "skipReason": "version-placeholder",
+                 "depIndex": 1,
+                 "updates": []
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-clean-plugin",
+                 "currentValue": "3.1.0",
+                 "fileReplacePosition": 1578,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 2,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.1.0"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-resources-plugin",
+                 "currentValue": "3.2.0",
+                 "fileReplacePosition": 1865,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 3,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.2.0"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-compiler-plugin",
+                 "currentValue": "3.8.1",
+                 "fileReplacePosition": 1992,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 4,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.8.1"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-surefire-plugin",
+                 "currentValue": "2.22.2",
+                 "fileReplacePosition": 2119,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 5,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "2.22.2"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-jar-plugin",
+                 "currentValue": "3.2.0",
+                 "fileReplacePosition": 2242,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 6,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.2.0"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-install-plugin",
+                 "currentValue": "2.5.2",
+                 "fileReplacePosition": 2368,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 7,
+                 "updates": [],
+                 "warnings": [],
+                 "sourceUrl": "http://svn.apache.org/viewvc/maven/plugins/tags/maven-install-plugin-2.5.2",
+                 "fixedVersion": "2.5.2"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-deploy-plugin",
+                 "currentValue": "2.8.2",
+                 "fileReplacePosition": 2493,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 8,
+                 "updates": [],
+                 "warnings": [],
+                 "sourceUrl": "http://svn.apache.org/viewvc/maven/plugins/tags/maven-deploy-plugin-2.8.2",
+                 "fixedVersion": "2.8.2"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-site-plugin",
+                 "currentValue": "3.9.1",
+                 "fileReplacePosition": 2732,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 9,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.9.1"
+               },
+               {
+                 "datasource": "maven",
+                 "depName": "org.apache.maven.plugins:maven-project-info-reports-plugin",
+                 "currentValue": "3.1.1",
+                 "fileReplacePosition": 2871,
+                 "registryUrls": ["https://repo.maven.apache.org/maven2"],
+                 "depIndex": 10,
+                 "updates": [],
+                 "warnings": [],
+                 "fixedVersion": "3.1.1"
+               }
+             ]
+           }
+         ]
+       }
+DEBUG: processRepo() (repository=dserkowski/renovateTest)
+DEBUG: Processing 0 branches:  (repository=dserkowski/renovateTest)
+DEBUG: Calculating prConcurrentLimit (20) (repository=dserkowski/renovateTest)
+DEBUG: 0 PRs are currently open (repository=dserkowski/renovateTest)
+DEBUG: PR concurrent limit remaining: 20 (repository=dserkowski/renovateTest)
+DEBUG: Calculated maximum PRs remaining this run (repository=dserkowski/renovateTest)
+       "prsRemaining": 20
+DEBUG: PullRequests limit = 20 (repository=dserkowski/renovateTest)
+DEBUG: Calculating branchConcurrentLimit (20) (repository=dserkowski/renovateTest)
+DEBUG: 0 already existing branches found:  (repository=dserkowski/renovateTest)
+DEBUG: Branch concurrent limit remaining: 20 (repository=dserkowski/renovateTest)
+DEBUG: Calculated maximum branches remaining this run (repository=dserkowski/renovateTest)
+       "branchesRemaining": 20
+DEBUG: Branches limit = 20 (repository=dserkowski/renovateTest)
+DEBUG: Removing any stale branches (repository=dserkowski/renovateTest)
+DEBUG: config.repoIsOnboarded=true (repository=dserkowski/renovateTest)
+DEBUG: No renovate branches found (repository=dserkowski/renovateTest)
+DEBUG: Repository timing splits (milliseconds) (repository=dserkowski/renovateTest)
+       "splits": {"init": 2765, "extract": 842, "lookup": 7858, "update": 2},
+       "total": 11485
+DEBUG: http statistics (repository=dserkowski/renovateTest)
+       "hostStats": [
+         "api.github.com, 3 requests, 278ms request average, 0ms queue average",
+         "packages.atlassian.com, 259 requests, 409ms request average, 0ms queue average"
+       ],
+       "totalRequests": 262
+ INFO: Repository finished (repository=dserkowski/renovateTest)
+       "durationMs": 11485
+DEBUG: Renovate exiting
